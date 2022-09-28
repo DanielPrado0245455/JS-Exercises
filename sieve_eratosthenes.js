@@ -7,7 +7,8 @@ var sieve = function (n) {
     "use strict";
 
     var array = [], primes = [], i, j;
-
+    let p = 2;
+    n = parseInt(document.getElementById("num").value);
 
 
     return primes;
