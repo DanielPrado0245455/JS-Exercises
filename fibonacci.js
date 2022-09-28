@@ -4,13 +4,13 @@
     generate the Fibonacci sequence to that number or to the Nth number.
 */
 // This array will keep memory of the previous fibonacci numbers
-var memo = {};
+var memo = {1:1, 2:1};
 function fibonacci() {
     "use strict";
-    var n = document.getElementById("num").value;
+    var n = parseInt(document.getElementById("num").value);
     var val = f(n);
     document.getElementById("fibonacciLbl").textContent = val;
-    //return f;
+    console.log(memo);
 }
 
 function f(n) {
@@ -20,11 +20,9 @@ function f(n) {
     if (memo.hasOwnProperty(n)) {
         value = memo[n];
     } else {
-        //TODO: Implement the fibonacci function here!
-
+        value = f(n-1) + f(n-2);
         memo[n] = value;
     }
 
     return value;
 }
-//console.log(fibonacci(15));
