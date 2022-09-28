@@ -3,6 +3,9 @@ Pig Latin
 */
 
 function igpayAtinlay(str) {
+
+    str = document.getElementById("WD").value;
+    let ans = document.getElementById("ans");
     var returnArray = [],
         wordArray = str.split(' ');
 
@@ -25,7 +28,7 @@ function igpayAtinlay(str) {
 
         returnArray.push(word.substr(beginning.length) + beginning + 'ay');
     }
-    return returnArray.join(' ');
+    return ans.innerHTML = returnArray.join(' ');
 }
 
 console.log(igpayAtinlay("pizza")); // "izzapay"
