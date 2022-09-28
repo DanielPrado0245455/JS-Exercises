@@ -9,6 +9,24 @@ var sieve = function (n) {
     var array = [], primes = [], i, j;
     let p = 2;
     n = parseInt(document.getElementById("num").value);
+    let ans = document.getElementById("ans").innerHTML = primes;
+
+    for(let i=2;i<n+1;i++)
+    {
+        array.push(i);
+    };
+
+    array.forEach
+
+    array.forEach(val => 
+        {
+            if(val !=0)
+            {
+                primes.push(val);
+            }
+        });
+    
+    
 
 
     return primes;
